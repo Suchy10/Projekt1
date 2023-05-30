@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.zewn{
+  height: fit-content;
+  /* padding-bottom: 10%; */
+  background-color: rgb(231, 191, 148);
+  /* background: linear-gradient(0deg, rgb(206, 198, 183) 90%, white 0%); */
+  /* background-image: linear-gradient( rgb(255, 255, 255) 3%, rgb(221, 197, 152) 3%); */
+}
+
+.title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-style: oblique;
+    font-size: 50px;
+    /* margin-top: 50px ; */
+    margin-bottom: 30px;
+    color: #228B22;
+    text-align: center;
+    /* max-width: 1280px; */
+
+}
+
+.title:before {
+    content: "";
+    display: block;
+    width: 420px;
+    height: 5px;
+    background: #191970;
+    left: 0;
+    top: 9%;
+    position: absolute;
+  }
+
+  .title:after {
+    content: "";
+    display: block;
+    width: 420px;
+    height: 5px;
+    background: #191970;
+    right: 0;
+    top: 9%;
+    position: absolute;
+  }
+
+  .obrazGlowny{
+    /* cursor: pointer; */
+    width: 500px;
+    height: 400px;
+    /* margin-left: -75px; */
+  }
+
+.ddiv{
+    /* float: left; */
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    /* height: 70vh; */
+} 
+
+.obrazmodal{
+  width: 500px;
+  height: 400px;
+  float: left;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-right: 5px;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+
+
+.ramka{
+      border: 1px solid black;
+  /* margin-left: 10px; */
+      background-color:rgb(155, 225, 218);
+      font-size: larger;
+      font-weight: bold;
+      cursor: pointer;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 1vh; 
+      /* margin-bottom: 0px; */
+      width: 80%;
+      margin: 0 auto;
+      /* overflow: hidden; */
+      height: 80%;
+      display: block;
+}
+
+.modalskladniki{
+  font-weight: bold;
+  font-family: Georgia;
+  word-wrap: break-word;
+  word-spacing: 2px;
+  font-style: italic;
+}
+
+.przygotowaniemodal{
+  font-weight: bold;
+  font-family: Georgia;
+  word-wrap: break-word;
+  word-spacing: 2px;
+  font-style: italic;
+}
+
+.container{
+  display: inline-block;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 7px;
+}
+
+.tekst{
+  font-weight: bold;
+  font-family: Georgia;
+  word-wrap: break-word;
+  word-spacing: 2px;
+  font-style: italic;
+}
+
+
+.search {
+  width: 50%;
+  /* position: relative; */
+  /* display: flex; */
+  margin-bottom: 10px;
+  margin-left: 35px;
+  /* display: inline-block; */
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wyszukiwarka{
+  width: 100%;
+  margin-bottom: 30px;
+}

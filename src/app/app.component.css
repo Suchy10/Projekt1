@@ -1,0 +1,18 @@
+.tlobutton{
+    background-color: rgb(118, 118, 189);
+    height: fit-content;
+    justify-content:flex-end;
+    display: flex;
+    width: 100%;
+}
+
+.przepis{
+    font-size: smaller;
+    float: left;
+    margin-left: 10px;
+}
+
+
+
+
+

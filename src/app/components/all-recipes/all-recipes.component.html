@@ -1,0 +1,43 @@
+<div class="zewn">
+    <h1 class="title">Wszystkie przepisy</h1>
+    <div class="wyszukiwarka">
+        <span class="search">
+            <input class="form-control" class="searchterm" placeholder="Wyszukaj" type="text"  [(ngModel)]="searchText" (input)="filtruj()"  placeholder="Szukaj nazwy">
+        </span>
+        <span class="search">
+            <input class="form-control" class="searchterm" placeholder="Wyszukaj" type="text"  [(ngModel)]="searchTextkat" (input)="filtrujkat()"  placeholder="Szukaj kategorii">
+        </span>
+    </div>
+
+    <!-- <span class="outer"> -->
+        <span *ngFor="let zmienna of listaAllFiltered; let i = index "  class="ddiv" (click)="obliczKalorie(zmienna)" (click)="modalService.open(['modal-',zmienna.nazwa].join(''))"> 
+            <jw-modal id="modal-{{zmienna.nazwa}}">
+                <div class="container">
+                <img class="obrazmodal" src="http://localhost:5000/{{zmienna.obraz}}" alt=""> <br>
+                <span class="przygotowaniemodal"> <br>
+                {{zmienna.przygotowanie}} <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Ocena</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.ocena" name="ocena" class="ocena"   matInput >  
+                </mat-form-field>
+                <button (click)="Update(zmienna)">Aktualizuj</button>
+                </span> <br>
+            </div>
+            <span class="skladnikmodal">
+              <span class="tekst">Składniki: </span><br>
+                <span class="modalskladniki" *ngFor="let skladnik of zmienna.skladniki">
+                {{skladnik.nazwaSklad}}:
+                {{skladnik.ilosc}} <br>    
+                </span>
+               <span class="tekst"> Ilość kalorii na porcję to: {{lacznekalorie}} kcal </span>
+            </span>
+            </jw-modal>
+            <span class="ramka">
+                <img src="http://localhost:5000/{{zmienna.obraz}}" class="obrazGlowny" alt=""> <br>
+                {{zmienna.nazwa}} <br>
+                {{zmienna.kategoria}} <br>
+              
+        </span>
+        </span>
+    <!-- </span> -->
+</div>

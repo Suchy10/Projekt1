@@ -1,0 +1,16 @@
+<div class="zewn">
+  <h1 class="title">Dodaj składnik</h1>
+    <form>
+        <mat-form-field class="pierwszy" appearance="fill">
+            <mat-label>Nazwa Składnika</mat-label>
+            <input type="text" [(ngModel)]="nazwasklad" name="nazwasklad" id="nazwasklad" matInput required>  
+          </mat-form-field>
+          <mat-form-field class="drugi" appearance="fill">
+            <mat-label>Kalorie</mat-label>
+            <input type="text" [(ngModel)]="kalorie" name="kalorie" id="kalorie" matInput required>
+          </mat-form-field>
+    </form>
+    <button class="dodanie" (click)="dodaj()">Dodaj składnik</button>
+    <div class="show" *ngIf="showMsg">Dodano składnik</div>
+    <div class="showfalse" *ngIf="showErr">Składnik już istnieje/Uzupełnij pola</div> 
+</div>

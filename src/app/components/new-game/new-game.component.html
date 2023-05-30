@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addGame</title>
+    <link rel="stylesheet" href="new-game.component.css">
+</head>
+<body>
+  <h1 id="title">Dodaj grę</h1>
+  <form >
+    <mat-form-field id="pierwszy" appearance="fill" formGroupName="tytul">
+      <mat-label>Tytuł</mat-label>
+      <input type="text" [(ngModel)]="tytul" name="tytuł" id="tytuł" matInput required>  
+    </mat-form-field>
+    <mat-form-field id="drugi" appearance="fill">
+      <mat-label>Producent</mat-label>
+      <input type="text" [(ngModel)]="Producent" name="producent" id="producent" matInput required>
+    </mat-form-field>
+    <mat-form-field id="trzeci" appearance="fill">
+      <mat-label>Rok wydania</mat-label>
+      <input type="text" [(ngModel)]="rokWyd" name="rok" id="rok" matInput required>
+    </mat-form-field>
+    <mat-form-field id="czwarty" appearance="fill">
+      <mat-label>Gatunek</mat-label>
+      <input type="text" [(ngModel)]="Gatunek" name="gatunek" id="gatunek" matInput required>
+    </mat-form-field>
+    <mat-form-field id="piaty" appearance="fill">
+      <mat-label>Kraj pochodzenia</mat-label>
+      <input type="text" [(ngModel)]="kraj" name="pochodzenie" id="pochodzenie" matInput required>
+    </mat-form-field>
+    <button type="button" id="obrazowy" (click)="fileInput.click()">  
+      Prześlij plik    
+    </button>
+    <span>{{fileName}}</span>
+    <input #fileInput type="file" name="obraz" id="obraz" accept="application/png" (change)="onChange($event)" style="display: none;">
+      <button id="zapisanie" (click)="zapisz()">Dodaj</button>
+  </form>
+  <div *ngIf="showMsg">Dodano grę</div>
+  <div *ngIf="showErr">Gra już istnieje/Uzupełnij pola</div>
+</body>
+</html>

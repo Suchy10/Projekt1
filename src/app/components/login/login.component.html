@@ -1,0 +1,18 @@
+<div class="zewn">
+    <h1 class="title">Zaloguj się</h1>
+    
+    <form class="formlogin" (ngSubmit)="onSubmit()">
+     <mat-form-field class="loginpage" appearance="fill">
+        <mat-label>Login</mat-label>
+        <input type="text" [(ngModel)]="login1" name="login1" id="login1" required matInput >  
+    </mat-form-field> <br>
+    <mat-form-field class="loginpage" appearance="fill">
+        <mat-label>Hasło</mat-label>
+        <input type="password" [(ngModel)]="password1" name="password1" id="password1" required matInput >  
+    </mat-form-field> <br>
+    <mat-error *ngIf="showError">Błędny login lub hasło</mat-error> <br>
+    <button type="submit" class="loguj">Zaloguj</button> 
+    <button (click)="regis()" class="rejestr">Rejestracja</button>
+    </form>
+    
+</div>

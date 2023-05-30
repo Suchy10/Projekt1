@@ -1,0 +1,49 @@
+.zewn{
+  background-color: rgb(231, 191, 148);
+  height: 100%;
+}
+.przycisk{
+    background-color: gray; 
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top: 10%;
+    margin-left: 170px;
+  }
+
+
+.title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-style: oblique;
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: #228B22;
+    text-align: center;
+}
+
+.title:before {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 5px;
+  background: #191970;
+  left: 0;
+  top: 9%;
+  position: absolute;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 5px;
+  background: #191970;
+  right: 0;
+  top: 9%;
+  position: absolute;
+}

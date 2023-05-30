@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show All</title>
+</head>
+<body>
+    <h1 id="title">Twoje gry</h1>
+    <div class="form-group mb-4">
+        <input class="form-control" type="text"  [(ngModel)]="searchText" (input)="filtruj()"  placeholder="Search">
+      </div>
+    <div *ngIf="(infoListFiltered)" id="pdiv">
+        <div *ngFor="let zmienna of infoListFiltered; let i = index "  id="ddiv" (click)="modalService.open(['modal-',zmienna.tytul].join(''))">
+        <jw-modal id="modal-{{zmienna.tytul}}">    
+            <form>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Tytuł</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.tytul" name="tytul" id="tytul"   matInput >  
+                </mat-form-field> <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Producent</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.producent" name="producent" id="producent"   matInput >  
+                </mat-form-field> <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Rok wydania</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.rok_wydania" name="rok" id="rok"   matInput >  
+                </mat-form-field> <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Gatunek</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.gatunek" name="gatunek" id="gatunek"   matInput >  
+                </mat-form-field> <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Kraj</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.kraj" name="kraj" id="kraj"   matInput >  
+                </mat-form-field> <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Ocena</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.ocena" name="ocena" id="ocena"   matInput >  
+                </mat-form-field> <br>
+                <mat-form-field class="modale" appearance="fill">
+                    <mat-label>Opinia</mat-label>
+                    <input type="text" [(ngModel)]="zmienna.wlasna_opinia" name="opinia" id="opinia" matInput>
+                </mat-form-field> <br>
+                <button (click)="Update(zmienna)">Aktualizuj</button>
+            </form>
+        </jw-modal>
+            <p>
+                <!-- {{zmienna.id_gry}} <br>
+                {{zmienna.tytul}}  <br>
+                {{zmienna.producent}}  <br>
+                {{zmienna.rok_wydania}}  <br>
+                {{zmienna.gatunek}}  <br> -->
+                <img src="http://localhost:5000/{{zmienna.image}}"  alt="">
+                <!-- {{zmienna.kraj}}   -->
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<body>
+  <h1 class="title">Zarejestruj się</h1>
+    <form class="fromRegister" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Login</mat-label>
+            <input type="text" [(ngModel)]="login" name="login" id="login" matInput >  
+          </mat-form-field>
+        <br>
+        <mat-form-field class="pierwszy" appearance="fill">
+            <mat-label>Hasło</mat-label>
+            <input type="text" [(ngModel)]="password" name="password" id="password" matInput >  
+          </mat-form-field>
+        <br>
+        <button class="rejestruj" type="submit">Zarejestruj</button>
+        </form>
+        
+</body>

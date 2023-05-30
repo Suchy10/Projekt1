@@ -1,0 +1,13 @@
+<!-- <div class="tlobutton">
+    <button class="wyloguj" *ngIf="showNavBar" (click)="Wyloguj()" >Wyloguj</button>
+</div> -->
+<div class="tlobutton">
+    <button  mat-button [matMenuTriggerFor]="menu" *ngIf="showNavBar">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+</div>
+  <mat-menu class="mojemenu" #menu="matMenu">
+    <mat-icon></mat-icon><span class="przepis">Ilość Twoich przepisów: {{iloscPrzepisUzyt}}</span>
+    <button mat-menu-item class="wyloguj"  (click)="Wyloguj()"><mat-icon>logout</mat-icon><span>Wyloguj</span></button>
+  </mat-menu>
+<router-outlet (activate)="toggleNavBar($event)"></router-outlet>

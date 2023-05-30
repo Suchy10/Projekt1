@@ -1,0 +1,76 @@
+.zewn{
+  height: fit-content;
+  background-color: rgb(231, 191, 148);
+}
+
+.title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-style: oblique;
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #228B22;
+    text-align: center;
+}
+
+.title:before {
+    content: "";
+    display: block;
+    width: 420px;
+    height: 5px;
+    background: #191970;
+    left: 0;
+    top: 9%;
+    position: absolute;
+  }
+
+  .title:after {
+    content: "";
+    display: block;
+    width: 420px;
+    height: 5px;
+    background: #191970;
+    right: 0;
+    top: 9%;
+    position: absolute;
+  }
+
+  .wrapper{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .dodanie{
+    font-family: 'Ubuntu', sans-serif;
+    /* position: absolute; */
+    
+    /* transform: translate(-50%, -50%); */
+    
+    width: 170px;
+    height: 40px;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 3px solid #8C82FC;
+    background: #fff;
+    color: #8C82FC;
+    border-radius: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .35s;
+  }
+  
+  .dodanie:hover{
+    background: #8C82FC;
+    color: #fff;
+  }
+  
+  .dodanie .buttonText{
+    opacity: 1;
+    visibility: visible;
+    transition: all .35s;
+  }
+  
+  

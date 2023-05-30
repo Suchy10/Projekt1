@@ -1,0 +1,133 @@
+.zewn{
+  height: fit-content;
+  background-color: rgb(231, 191, 148);
+}
+
+.title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-style: oblique;
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #228B22;
+    text-align: center;
+}
+
+.title:before {
+    content: "";
+    display: block;
+    width: 420px;
+    height: 5px;
+    background: #191970;
+    left: 0;
+    top: 9%;
+    position: absolute;
+  }
+
+  .title:after {
+    content: "";
+    display: block;
+    width: 420px;
+    height: 5px;
+    background: #191970;
+    right: 0;
+    top: 9%;
+    position: absolute;
+  }
+
+
+.dodajskladnik {
+  --c:  #229091; /* the color*/
+  /* position: absolute; */
+  margin-left: 30px;
+  margin-top: 20px;
+  font-family: system-ui, sans-serif;
+font-size: 20px;
+cursor: pointer;
+padding: .1em .6em;
+font-weight: bold;  
+border: none;
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+
+.dodajskladnik:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+
+.dodajskladnik:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+
+.ponizej{
+  margin-left: 30px;
+  margin-top:10px;
+}
+
+.ponizejZapis{
+  margin-left: 30px;
+  margin-top:10px;
+}
+
+.ponizejZapis{
+  box-shadow: 0px 0px 7px -1px #3dc21b;
+  background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+  background-color:#44c767;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:17px;
+  font-style:italic;
+  padding:9px 35px;
+  text-decoration:none;
+  text-shadow:0px 0px 0px #2f6627;
+}
+
+.ponizejZapis:hover{
+  background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+  background-color:#5cbf2a;
+}
+
+.ponizejZapis:active{
+  /* position:relative; */
+  top:1px;
+}
+
+.ponizej{
+  box-shadow: 3px 3px 0px 0px #899599;
+  background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color:#ededed;
+  border:1px solid #d6bcd6;
+  display:inline-block;
+  cursor:pointer;
+  color:#3a8a9e;
+  font-family:Georgia;
+  font-size:17px;
+  font-style:italic;
+  padding:5px 12px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #e1e2ed;
+}
+
+.ponizej:hover{
+  background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+  background-color:#bab1ba;
+}
+
+.ponizej:active{
+  /* position:relative; */
+  top:1px;
+}

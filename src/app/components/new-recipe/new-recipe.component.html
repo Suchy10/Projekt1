@@ -1,0 +1,43 @@
+<div class="zewn">
+    <h1 class="title">Dodaj przepis</h1>
+  <form >
+    <mat-form-field class="pierwszy" appearance="fill">
+      <mat-label>Nazwa</mat-label>
+      <input type="text" [(ngModel)]="nazwa" name="nazwa" id="nazwa" matInput required>  
+    </mat-form-field>
+    <mat-form-field class="trzeci" appearance="fill">
+      <mat-label>Kategoria</mat-label>
+      <input type="text" [(ngModel)]="kategoria" name="kategoria" id="kategoria" matInput required>
+    </mat-form-field>
+    <mat-form-field class="czwarty" appearance="fill">
+      <mat-label>Przygotowanie</mat-label>
+      <input type="text" [(ngModel)]="przygotowanie" name="przygotowanie" id="przygotowanie" matInput required>
+    </mat-form-field>
+    <mat-form-field class="trzeci" appearance="fill">
+      <mat-label>Ilość porcji</mat-label>
+      <input type="text" [(ngModel)]="iloscPorcji" name="porcja" id="porcja" matInput required>
+    </mat-form-field>
+    <mat-form-field class="piaty" appearance="fill">
+      <mat-label>Składniki</mat-label>
+      <mat-select [(ngModel)]="wybranesklad" (ngModelChange)="onSelect()" name="wybranesklad" multiple >
+        <mat-option *ngFor="let skladnik of listaskladnikow" [value]="skladnik">{{skladnik.nazwaSklad}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="dodajskladnik" type="button" (click)="addIngredient()">Dodaj składnik</button>
+  <div *ngFor="let i of wybranesklad; let w = index">
+    <span>Ilość składników</span>
+    <mat-form-field appearance="fill">
+      <mat-label>  {{i.nazwaSklad}}</mat-label>   
+      <input type="text" [(ngModel)]="i.ilosc" name=ilosc{{i.nazwaSklad}} matInput required> 
+    </mat-form-field> 
+  </div> <br>
+  <button type="button" class="ponizej" (click)="fileInput.click()">  
+    Prześlij plik    
+  </button> 
+  <span>{{fileName}}</span> <br>
+    <input #fileInput type="file" class="ponizej" name="obraz" accept="application/png" (change)="onChange($event)" style="display: none;">
+    <button class="ponizejZapis" (click)="zapisz()">Dodaj</button>
+  </form>
+    <div *ngIf="showMsg">Dodano przepis</div>
+    <div *ngIf="showErr">Przepis już istnieje/Uzupełnij pola</div>
+</div>
